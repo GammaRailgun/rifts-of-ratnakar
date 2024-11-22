@@ -110,16 +110,16 @@ for values in data:
 
     bpy.data.scenes['Scene'].camera = bpy.data.objects['Camera']
     output_file = f".\\images\\{name}-Top.png"
-    bpy.context.scene.render.resolution_x = 1920
-    bpy.context.scene.render.resolution_y = 1080
+    bpy.context.scene.render.resolution_x = 600
+    bpy.context.scene.render.resolution_y = 600
     bpy.context.scene.render.image_settings.file_format = "PNG"
     bpy.ops.render.render(write_still=True)
     bpy.data.images["Render Result"].save_render(output_file)
 
     bpy.data.scenes['Scene'].camera = bpy.data.objects['Camera.001']
     output_file = f".\\images\\{name}-Side.png"
-    bpy.context.scene.render.resolution_x = 1920
-    bpy.context.scene.render.resolution_y = 1080
+    bpy.context.scene.render.resolution_x = 600
+    bpy.context.scene.render.resolution_y = 600
     bpy.context.scene.render.image_settings.file_format = "PNG"
     bpy.ops.render.render(write_still=True)
     bpy.data.images["Render Result"].save_render(output_file)
