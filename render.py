@@ -100,6 +100,7 @@ for values in data:
     bpy.data.lights['Point.001'].energy = 6000
 
     bpy.ops.object.camera_add(location=(midpoint, 0, 20))
+    bpy.data.objects['Camera'].rotation_euler[2] = math.pi / 2
     bpy.data.cameras['Camera.001'].type = 'ORTHO'
     bpy.data.cameras['Camera.001'].ortho_scale = 40
 
